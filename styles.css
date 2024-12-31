@@ -1,0 +1,27 @@
+/* Hide ALL possible Shorts elements */
+[href*="/shorts/"],
+[title="Shorts"],
+[aria-label*="Shorts"],
+ytd-guide-entry-renderer[title="Shorts"],
+ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+ytd-reel-shelf-renderer,
+ytd-rich-shelf-renderer:has([href*="/shorts/"]),
+ytd-rich-section-renderer[is-shorts],
+ytd-reel-video-renderer,
+ytd-video-renderer:has([href*="/shorts/"]),
+ytd-rich-grid-media:has([href*="/shorts/"]),
+ytd-rich-grid-row:has([href*="/shorts/"]),
+ytd-grid-video-renderer:has([href*="/shorts/"]),
+tp-yt-paper-item:has([href*="/shorts/"]),
+ytd-guide-collapsible-entry-renderer:has([title="Shorts"]) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Hide parent containers if they only contain Shorts */
+ytd-rich-section-renderer:has([href*="/shorts/"]),
+ytd-shelf-renderer:has([href*="/shorts/"]) {
+    display: none !important;
+} 
